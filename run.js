@@ -36,10 +36,10 @@ module['exports'] = function myService (hook) {
   request(options, function(e, r, body) {
     
      if (e) {
-       hook.res.end(body);
+       hook.res.json(body);
        return;
      }
-     hook.res.end(body); 
+     hook.res.json(body); 
 
   });
     
