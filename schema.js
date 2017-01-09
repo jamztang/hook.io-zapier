@@ -47,7 +47,7 @@ module['exports'] = function myService (hook) {
           var name = key;
           var type = mapping[value.type] || "text";
           var required = value.required || false;
-          var label = value.label || "";
+          var label = value.label || name || "";
           var help = value.help || "";
 
           var info = {
