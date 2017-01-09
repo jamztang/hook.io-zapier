@@ -52,7 +52,7 @@ module['exports'] = function myService (hook) {
 
           var info = {
             "type": type,
-            "key": name,
+            "key": "data__" + name,
             "required": required,
             "label": label,
             "help_text": help,
