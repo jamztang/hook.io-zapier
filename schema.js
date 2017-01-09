@@ -23,11 +23,13 @@ module['exports'] = function myService (hook) {
       return webhook.name === name;
     }));
     
+
+    var mschemaStatus = webhook.mschemaStatus || false;
     var mschema = webhook.mschema;  // assume mschema is enabled
     
     var formatted;
  
-    if ( ! mschema) {
+    if ( ! (mschemaStatus && mschema)) {
       formatted = [{
           "type": "text",
           "key": "data",
